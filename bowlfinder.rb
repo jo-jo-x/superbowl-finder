@@ -7,47 +7,47 @@ class Bowling
 
   def y_or_n
     # List of teams
-    teams = [
-      "Arizona Cardinals", 
-      "Atlanta Falcons", 
-      "Baltimore Colts", 
-      "Baltimore Ravens", 
-      "Buffalo Bills", 
-      "Carolina Panthers", 
-      "Chicago Bears", 
-      "Cincinnati Bengals", 
-      "Dallas Cowboys", 
-      "Denver Broncos", 
-      "Green Bay Packers", 
-      "Indianapolis Colts", 
-      "Kansas City Chiefs", 
-      "Los Angeles Raiders", 
-      "Los Angeles Rams", 
-      "Miami Dolphins", 
-      "Minnesota Vikings", 
-      "New England Patriots", 
-      "New York Giants", 
-      "New York Jets", 
-      "New Orleans Saints", 
-      "Oakland Raiders", 
-      "Philadelphia Eagles", 
-      "Pittsburgh Steelers", 
-      "San Diego Chargers", 
-      "San Francisco 49ers", 
-      "Seattle Seahawks", 
-      "St. Louis Rams", 
-      "Tampa Bay Buccaneers", 
-      "Tennessee Titans", 
-      "Washington Redskins"
-      ]
+    teams = { 
+      :t0 => "Arizona Cardinals", 
+      :t1 => "Atlanta Falcons", 
+      :t2 => "Baltimore Colts", 
+      :t3 => "Baltimore Ravens", 
+      :t4 => "Buffalo Bills", 
+      :t5 => "Carolina Panthers", 
+      :t6 => "Chicago Bears", 
+      :t7 => "Cincinnati Bengals", 
+      :t8 => "Dallas Cowboys", 
+      :t9 => "Denver Broncos", 
+      :t10 => "Green Bay Packers", 
+      :t11 => "Indianapolis Colts", 
+      :t12 => "Kansas City Chiefs", 
+      :t13 => "Los Angeles Raiders", 
+      :t14 => "Los Angeles Rams", 
+      :t15 => "Miami Dolphins", 
+      :t16 => "Minnesota Vikings", 
+      :t17 => "New England Patriots", 
+      :t18 => "New York Giants", 
+      :t19 => "New York Jets", 
+      :t20 => "New Orleans Saints", 
+      :t21 => "Oakland Raiders", 
+      :t22 => "Philadelphia Eagles", 
+      :t23 => "Pittsburgh Steelers", 
+      :t24 => "San Diego Chargers", 
+      :t25 => "San Francisco 49ers", 
+      :t26 => "Seattle Seahawks", 
+      :t27 => "St. Louis Rams", 
+      :t28 => "Tampa Bay Buccaneers", 
+      :t29 => "Tennessee Titans", 
+      :t30 => "Washington Redskins" 
+      }
       # First array of competing teams
-      team1 = [
+      team1 = { 
       # 1960s  
-      12, 10, 20, 16, 
+      "ta1966" => :t12, "ta1967" => :t10, "ta1968" => :t20, "ta1969" => :t16, 
       # 1970s 
-      2, 8, 15, 16, 23, 9, 21, 8, 23, 14, 
+      :ta1970 => :t2, :ta1971 => :t8, :ta1972 => :t15, :ta1973 => :t16, :ta1974 => :t23, :ta1975 => :t9, :ta1976 => :t21, :ta1977 => :t8, :ta1978 => :t23, :ta1979 => :t14, 
       # 1980s
-      21, 25, 15, 30, 15, 6, 10, 30, 7, 25, 
+      :ta1980 => :t21, :ta1981 => :t25, :ta1982 => :t15, :ta1983 => :t30, :ta1984 => :t15, :ta1985 => :t6, :ta1986 => :t10, :ta1987 => :t30, :ta1988 => :t7, :ta1989 => :t25, 
       # 1990s
       4, 30, 4, 8, 24, 8, 17, 10, 9, 27, 
       # 2000s
@@ -56,7 +56,7 @@ class Bowling
       23, 18, 3, 26, 17, 5, 17, 22, 17, 25, 
       # 2020s 
       12, 14, 12, 25, 12
-      ]
+      }
       # Second array of competing teams
       team2 = [
       # 1960s   
