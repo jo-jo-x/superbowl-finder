@@ -66,59 +66,57 @@ team2 = [
 28, 7, 22, 12, 22
 ]
 
-arraysam = [3, 8, 17, 29, 50, 51, 60]
 
-test = 59
-# =begin
-if test.to_s.length == 2
-  if test.to_s.chars.map(&:to_i)[0] <= 3
+# roman numeral creator (1-99)
+if sb_num.to_s.length == 2
+  if sb_num.to_s.chars.map(&:to_i)[0] <= 3
     rnuma = "X"
-    rnuma = rnuma * test.to_s.chars.map(&:to_i)[0]
-  elsif test.to_s.chars.map(&:to_i)[0] == 4
+    rnuma = rnuma * sb_num.to_s.chars.map(&:to_i)[0]
+  elsif sb_num.to_s.chars.map(&:to_i)[0] == 4
     rnuma = "XL"
-  elsif test.to_s.chars.map(&:to_i)[0] == 5
-    if test.to_s.chars.map(&:to_i)[1] == 0
+  elsif sb_num.to_s.chars.map(&:to_i)[0] == 5
+    if sb_num.to_s.chars.map(&:to_i)[1] == 0
       rnuma = "50"
     else
       rnuma = "L"
     end
-  elsif test.to_s.chars.map(&:to_i)[0] <= 8
+  elsif sb_num.to_s.chars.map(&:to_i)[0] <= 8
     rnumz = "X"
-    rnumx = rnumz * (test.to_s.chars.map(&:to_i)[0] - 5)
+    rnumx = rnumz * (sb_num.to_s.chars.map(&:to_i)[0] - 5)
     rnuma = "L" + rnumx
   else
     rnuma = "XC"
   end
-  if test.to_s.chars.map(&:to_i)[1] == 0
+  if sb_num.to_s.chars.map(&:to_i)[1] == 0
     rnumb = ""
-  elsif test.to_s.chars.map(&:to_i)[1] <= 3
+  elsif sb_num.to_s.chars.map(&:to_i)[1] <= 3
     rnumb = "I"
-    rnumb = rnumb * test.to_s.chars.map(&:to_i)[1]
-  elsif test.to_s.chars.map(&:to_i)[1] == 4
+    rnumb = rnumb * sb_num.to_s.chars.map(&:to_i)[1]
+  elsif sb_num.to_s.chars.map(&:to_i)[1] == 4
     rnumb = "IV"
-  elsif test.to_s.chars.map(&:to_i)[1] == 5
+  elsif sb_num.to_s.chars.map(&:to_i)[1] == 5
     rnumb = "V"
-  elsif test.to_s.chars.map(&:to_i)[1] <= 8
+  elsif sb_num.to_s.chars.map(&:to_i)[1] <= 8
     rnumz = "I"
-    rnumi = rnumz * (test.to_s.chars.map(&:to_i)[1] - 5)
+    rnumi = rnumz * (sb_num.to_s.chars.map(&:to_i)[1] - 5)
     rnumb = "V" + rnumi
   else
     rnumb = "IX"
   end
   rnum = rnuma + rnumb
 else
-  if test.to_s.chars.map(&:to_i)[0] == 0
+  if sb_num.to_s.chars.map(&:to_i)[0] == 0
     rnumb = ""
-  elsif test.to_s.chars.map(&:to_i)[0] <= 3
+  elsif sb_num.to_s.chars.map(&:to_i)[0] <= 3
     rnumb = "I"
-    rnumb = rnumb * test.to_s.chars.map(&:to_i)[0]
-  elsif test.to_s.chars.map(&:to_i)[0] == 4
+    rnumb = rnumb * sb_num.to_s.chars.map(&:to_i)[0]
+  elsif sb_num.to_s.chars.map(&:to_i)[0] == 4
     rnumb = "IV"
-  elsif test.to_s.chars.map(&:to_i)[0] == 5
+  elsif sb_num.to_s.chars.map(&:to_i)[0] == 5
     rnumb = "V"
-  elsif test.to_s.chars.map(&:to_i)[0] <= 8
+  elsif sb_num.to_s.chars.map(&:to_i)[0] <= 8
     rnumz = "I"
-    rnumi = rnumz * (test.to_s.chars.map(&:to_i)[0] - 5)
+    rnumi = rnumz * (sb_num.to_s.chars.map(&:to_i)[0] - 5)
     rnumb = "V" + rnumi
   else
     rnumb = "IX"
@@ -126,8 +124,7 @@ else
   rnum = rnumb
 end
 
-print rnum
-#=end
+
 
 
 
@@ -137,11 +134,3 @@ sb_list.store(:year, 1966)
 sb_list.store(:year, 1967)
 
 # print sb_list
-
-class Database
-  attr_accessor :year
-
-  def initialize
-    @year = year
-  end
-end
