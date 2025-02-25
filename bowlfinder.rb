@@ -78,7 +78,7 @@ class Bowling
     puts "\n"
     puts "This is the NFL Super Bowl search tool! Search for a Super Bowl by YEAR or by NUMBER?"
     loop do
-      puts "1. Search by year (1966-2025)"
+      puts "1. Search by year (1966-2024)"
       puts "2. Search by number (1-59)"
       puts "3. Exit search tool"
       puts "Choose an option:"
@@ -86,10 +86,11 @@ class Bowling
 
       case decision
       when 1
-        puts "Please input the year of Super Bowl you want information for:"
+        puts "Please input the year of the Super Bowl you want information for:"
         self.input = gets.chomp.to_i
 
         if self.input - 1966 < 0 || self.input - 1966 > 58
+          puts "\n"
           puts "Not a valid year!"
           puts "\n"
         else
@@ -156,10 +157,11 @@ class Bowling
           puts "\n"
         end
       when 2
-        puts "Please input the year of Super Bowl you want information for:"
+        puts "Please input the number of the Super Bowl you want information for:"
         self.input = gets.chomp.to_i
 
         if self.input < 1 || self.input > 59
+          puts "\n"
           puts "Not a valid number!"
           puts "\n"
         else
@@ -230,11 +232,10 @@ class Bowling
         puts "Goodbye!"
         break
       else
+        puts "\n"
         puts "Not a valid option!"
         puts "\n"
       end
     end
   end
 end
-baobao = Bowling.new
-baobao.y_or_n
