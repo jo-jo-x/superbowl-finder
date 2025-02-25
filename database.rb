@@ -67,62 +67,7 @@ team2 = [
 ]
 
 
-# roman numeral creator (1-99)
-if sb_num.to_s.length == 2
-  if sb_num.to_s.chars.map(&:to_i)[0] <= 3
-    rnuma = "X"
-    rnuma = rnuma * sb_num.to_s.chars.map(&:to_i)[0]
-  elsif sb_num.to_s.chars.map(&:to_i)[0] == 4
-    rnuma = "XL"
-  elsif sb_num.to_s.chars.map(&:to_i)[0] == 5
-    if sb_num.to_s.chars.map(&:to_i)[1] == 0
-      rnuma = "50"
-    else
-      rnuma = "L"
-    end
-  elsif sb_num.to_s.chars.map(&:to_i)[0] <= 8
-    rnumz = "X"
-    rnumx = rnumz * (sb_num.to_s.chars.map(&:to_i)[0] - 5)
-    rnuma = "L" + rnumx
-  else
-    rnuma = "XC"
-  end
-  if sb_num.to_s.chars.map(&:to_i)[1] == 0
-    rnumb = ""
-  elsif sb_num.to_s.chars.map(&:to_i)[1] <= 3
-    rnumb = "I"
-    rnumb = rnumb * sb_num.to_s.chars.map(&:to_i)[1]
-  elsif sb_num.to_s.chars.map(&:to_i)[1] == 4
-    rnumb = "IV"
-  elsif sb_num.to_s.chars.map(&:to_i)[1] == 5
-    rnumb = "V"
-  elsif sb_num.to_s.chars.map(&:to_i)[1] <= 8
-    rnumz = "I"
-    rnumi = rnumz * (sb_num.to_s.chars.map(&:to_i)[1] - 5)
-    rnumb = "V" + rnumi
-  else
-    rnumb = "IX"
-  end
-  rnum = rnuma + rnumb
-else
-  if sb_num.to_s.chars.map(&:to_i)[0] == 0
-    rnumb = ""
-  elsif sb_num.to_s.chars.map(&:to_i)[0] <= 3
-    rnumb = "I"
-    rnumb = rnumb * sb_num.to_s.chars.map(&:to_i)[0]
-  elsif sb_num.to_s.chars.map(&:to_i)[0] == 4
-    rnumb = "IV"
-  elsif sb_num.to_s.chars.map(&:to_i)[0] == 5
-    rnumb = "V"
-  elsif sb_num.to_s.chars.map(&:to_i)[0] <= 8
-    rnumz = "I"
-    rnumi = rnumz * (sb_num.to_s.chars.map(&:to_i)[0] - 5)
-    rnumb = "V" + rnumi
-  else
-    rnumb = "IX"
-  end
-  rnum = rnumb
-end
+
 
 
 
